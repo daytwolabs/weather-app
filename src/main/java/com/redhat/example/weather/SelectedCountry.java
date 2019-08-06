@@ -7,6 +7,7 @@ import java.io.Serializable;
 @SessionScoped
 public class SelectedCountry implements Serializable {
 
+    private static final long serialVersionUID = -79144185506126901L;
     private String code = "en";
 
 
