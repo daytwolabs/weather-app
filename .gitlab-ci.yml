@@ -1,0 +1,17 @@
+stages:
+  - build
+
+variables:
+  OPENSHIFT_URL: https://api.pro-us-east-1.openshift.com
+
+build:
+  stage: build
+  image: maven:3-jdk-8
+  cache:
+    paths:
+      - .m2/
+  script:
+    - mvn -B package
+  artifacts:
+    paths:
+      - target/
